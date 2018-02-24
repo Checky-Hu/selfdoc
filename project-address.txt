@@ -1,0 +1,3 @@
+https://github.com/fuchsia-mirror/zircon.git
+https://github.com/Stichting-MINIX-Research-Foundation/minix.git
+git://git.minix3.org/minix

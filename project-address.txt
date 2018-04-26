@@ -3,3 +3,4 @@ https://github.com/Stichting-MINIX-Research-Foundation/minix.git
 git://git.minix3.org/minix
 git@github.com:openembedded/openembedded-core.git
 git@github.com:freebsd/freebsd.git
+git@github.com:mit-pdos/xv6-public.git

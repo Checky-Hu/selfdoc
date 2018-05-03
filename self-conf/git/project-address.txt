@@ -14,3 +14,5 @@ https://git.haiku-os.org/haiku
 7.illumos(OpenSolaris):
 git@github.com:illumos/illumos-gate.git
 8.plan9:(download iso image to view source code)
+9.darwin-xnu:
+git@github.com:apple/darwin-xnu.git

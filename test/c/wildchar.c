@@ -10,11 +10,11 @@ int match(char * filter, char * target)
   while (*p2) {
     if (*p1 == '.' || *p1 == *p2)
       p1++, p2++;
-    else if (*p1 == '*')
-      wildchar_pos = p1, p1++;
+    else if (*p1 == '*') // Record the (last match position + 1).
+      wildchar_pos = p1 + 1, p1++;
     else {
       if (wildchar_pos) // Revert both p1 and p2 to (last match position + 1).
-        p2 = p2 - (p1 - (wildchar_pos + 1)) + 1, p1 = wildchar_pos + 1;
+        p2 = p2 - (p1 - wildchar_pos) + 1, p1 = wildchar_pos;
       else
         return -1; // No '*' before, not match.
     }

@@ -1,0 +1,16 @@
+1.show local branch('*' point current branch):
+git branch
+2.show remote branch:
+git branch -r
+3.show all branches include local and remote:
+git branch -a
+4.create new branch:
+git branch name
+5.delete branch:
+git branch -d name
+6.show the remote branch that local branch based:
+git branch -vv
+7.rename branch:
+git branch -m old new
+8.change current branch:
+git checkout branch-name

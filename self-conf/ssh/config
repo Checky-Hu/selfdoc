@@ -2,4 +2,4 @@
 # ~/.ssh/ to using.
 Host *
     TCPKeepAlive yes
-    ServerAliveInterval 300
+    ServerAliveInterval 60

@@ -1,0 +1,5 @@
+# Keep ssh alive from timeout. Copy this to
+# ~/.ssh/ to using.
+Host *
+    TCPKeepAlive yes
+    ServerAliveInterval 300

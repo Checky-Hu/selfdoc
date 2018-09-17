@@ -1,0 +1,11 @@
+1.create local tag:
+git tag -a tagname -m "message"
+2.delete local tag:
+git tag -d tagname
+3.push tag to remote origin:
+git push origin refs/tags/src-tagname:refs/tags/dst-tagname
+4.add tag to remote origin(ignore dst param in 3):
+git push origin tagname
+5.delete tag from remote origin(ignore src param in 3):
+git push origin :refs/tags/dst-tagname
+

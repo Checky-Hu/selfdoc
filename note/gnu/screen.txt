@@ -1,7 +1,7 @@
 1.show all screen works:
 screen -list
 2.create screen work with target name:
-screen -S name
+screen -S name (/dev/tty* bitrate)
 3.resume detached screen work:
 screen -r name
 4.detach current screen:

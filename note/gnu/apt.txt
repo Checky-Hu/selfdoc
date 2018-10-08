@@ -25,3 +25,7 @@ apt-cache showpkg packagename
 dpkg -S file
 12.show all files that included in package:
 dpkg -L packagename
+13.add source to source list and install(install WIFI driver as example):
+vim /etc/apt/sources.list
+deb http://httpredir.debian.org/debian/ jessie main contrib non-free
+apt-get install firmware-* (different driver depends on WIFI hardware)

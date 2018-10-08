@@ -1,0 +1,4 @@
+1.for debug mode:
+ssh -vvv host@domain
+2.common use:
+ssh -X host@domain -p port

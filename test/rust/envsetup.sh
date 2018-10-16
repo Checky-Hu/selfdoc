@@ -1,3 +1,4 @@
+#!/bin/bash
 tmpcmd=`cat ${HOME}/.cargo/env` && eval ${tmpcmd}
 echo ${PATH}
 

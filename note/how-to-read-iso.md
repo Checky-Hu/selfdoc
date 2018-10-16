@@ -1,6 +1,13 @@
-mount plan9.iso /home/checky/Documents/os/plan9/plan9/
+how to read iso
+======
 
-result by "df -Th":
+```shell
+mount plan9.iso /home/checky/Documents/os/plan9/plan9/
+```
+
+Result by "df -Th":
+
+```
 Filesystem                      Type      Size  Used Avail Use% Mounted on
 udev                            devtmpfs  3.8G     0  3.8G   0% /dev
 tmpfs                           tmpfs     777M  9.2M  768M   2% /run
@@ -14,3 +21,6 @@ tmpfs                           tmpfs     3.8G     0  3.8G   0% /sys/fs/cgroup
 /dev/mapper/checky--hu--vg-home ext4      879G   41G  793G   5% /home
 tmpfs                           tmpfs     777M   12K  777M   1% /run/user/1000
 /dev/loop0                      iso9660   287M  287M     0 100% /home/checky/Documents/os/plan9/plan9
+```
+
+then feel free to do anything.

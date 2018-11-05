@@ -37,3 +37,10 @@ deb http://httpredir.debian.org/debian/ jessie main contrib non-free
 # different driver depends on WIFI hardware
 apt-get install firmware-*
 ```
+- uninstall old kernel:
+```shell
+# show installed kernel image
+dpkg --get-selections | grep linux
+# uninstall old kernel
+dpkg --purge --force-remove-essential linux-image-XXX
+```

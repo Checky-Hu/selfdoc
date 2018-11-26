@@ -5,7 +5,10 @@
 #include <sys/wait.h>
 #include <unistd.h>
 
-int main()
+#define CHILD_CMD "echo"
+#define CHILD_CMD_DIR "/bin/"
+
+int main(int argc, char ** argv)
 {
   pid_t pid = fork();
   if (pid < 0)
@@ -23,7 +26,16 @@ int main()
     }
   } else {
     sleep(3);
-    execlp("/bin/echo", "/bin/echo", "hello world!\n", NULL);
+    // Exec family include : execl/execlp/execle/execv/
+    // execvp. All these functions point to execve().
+    // Use 'man exec' for more information.
+    char * child_argv[3] = {CHILD_CMD, NULL, NULL};
+    if (argc > 1)
+      child_argv[1] = argv[1];
+    else
+      child_argv[1] = "hello world!";
+    char * child_envp[1] = {NULL};
+    execve(CHILD_CMD_DIR CHILD_CMD, child_argv, child_envp);
     return 2;
   }
 }

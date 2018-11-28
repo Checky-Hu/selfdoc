@@ -15,6 +15,6 @@ int main(int argc, char ** argv)
   ss << argv[1];
   ss >> num;
   std::vector<int> data(num);
-  std::cout << "pointer=" << data.data() << "\n";
+  std::cout << "num=" << num << ", pointer=" << data.data() << std::endl;
   return 0;
 }

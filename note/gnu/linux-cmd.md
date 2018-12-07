@@ -30,7 +30,7 @@ df -lh
 ### tar
 ```shell
 # 'c' means compress
-tar -zcvf ${SOURCE_FILE}
+tar -zcvf ${TARGET_FILE} ${SOURCE_FILE}
 # 'x' means uncompress
 tar -zxvf ${PACK_FILE}
 ```

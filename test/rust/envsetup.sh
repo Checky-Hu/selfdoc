@@ -1,6 +1,5 @@
 #!/bin/bash
-tmpcmd=`cat ${HOME}/.cargo/env` && eval ${tmpcmd}
-echo ${PATH}
+source ${HOME}/.cargo/env
 
 rustc --version
 cargo --version

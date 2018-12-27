@@ -10,18 +10,20 @@ Cross Compile using Clang
 - sys: `none|linux|win32|darwin`
 - abi: `eabi|gnu|android|elf`
 
-`<triple>` always equals to the cross compile toolchain's name.
+`<triple>` should be the cross compile toolchain's name.
 
 ### compile flags
 - set cpu: `-mcpu=<cpu-name>`
 - set fpu(sse3|neon): `-mfpu=<fpu-name>`
 - set float abi(soft|hard): `-mfloat-abi=<fabi>`
 
+use `<triple>-gcc -v` to show the specific value of those parameters above.
+
 ### paths for header files and libraries
 - use `--sysroot=<root_path>` and `-I -L` options
 
-`<root_path>` should point to the platform's root which contains `etc|lib|usr` in cross compile toolchain's directory.
+`<root_path>` should point to the platform's root which contains `etc|lib|usr` in cross compile toolchain's directory. it should be `<toolchain_path>/<triple>/libc`.
 
 - use `--gcc-toolchain=<toolchain_path>` indicate linker path
 
-`<toolchain_path>` should point to the cross compile toolchain's directory.
+`<toolchain_path>` should be the cross compile toolchain's directory.

@@ -18,7 +18,7 @@ cmake -G "Ninja" -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=${TEMP_ARM_PR
   -DCMAKE_FIND_ROOT_PATH_MODE_LIBRARY=ONLY -DCMAKE_FIND_ROOT_PATH_MODE_INCLUDE=ONLY \
   -DLLVM_TABLEGEN=${TEMP_HOST_PREFIX_DIR}/bin/llvm-tblgen \
   -DCLANG_TABLEGEN=${TEMP_CUR_DIR}/../build/bin/clang-tblgen \
-  -DLLVM_DEFAULT_TARGET_TRIPLE=arm-linux-gnueabihf \
+  -DLLVM_DEFAULT_TARGET_TRIPLE=${TEMP_TOOLCHAIN_TRIPLE} \
   -DLLVM_TARGET_ARCH=ARM -DLLVM_TARGETS_TO_BUILD=ARM \
   -DCMAKE_C_FLAGS="-march=armv7-a -mcpu=cortex-a9 -mfpu=vfpv3-d16 -mfloat-abi=hard --target=${TEMP_TOOLCHAIN_TRIPLE} --gcc-toolchain=${TEMP_TOOLCHAIN_ROOT_DIR} --sysroot=${TEMP_TOOLCHAIN_ROOT_DIR}/${TEMP_TOOLCHAIN_TRIPLE}/libc -I${TEMP_ARM_PREFIX_DIR}/include -v" \
   -DCMAKE_CXX_FLAGS="-march=armv7-a -mcpu=cortex-a9 -mfpu=vfpv3-d16 -mfloat-abi=hard --target=${TEMP_TOOLCHAIN_TRIPLE} --gcc-toolchain=${TEMP_TOOLCHAIN_ROOT_DIR} --sysroot=${TEMP_TOOLCHAIN_ROOT_DIR}/${TEMP_TOOLCHAIN_TRIPLE}/libc -I${TEMP_ARM_PREFIX_DIR}/include -v" \

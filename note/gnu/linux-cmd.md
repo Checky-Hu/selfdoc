@@ -25,6 +25,14 @@ du -sh
 df -lh
 ```
 
+## show link dependency of library
+```shell
+# on x86
+ldd ${LIB_NAME}
+# on arm
+arm-linux-gnueabihf-readelf -d ${LIB_NAME}
+```
+
 ## other commands
 
 ### tar

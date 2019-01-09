@@ -26,6 +26,11 @@ cd llvm/tools
 svn checkout http://llvm.org/svn/llvm-project/lld/trunk lld
 cd ../..
 
+# check out libunwind(this step can be skipped since we don't use libunwind)
+cd llvm/projects
+svn checkout http://llvm.org/svn/llvm-project/libunwind/trunk libunwind
+cd ../..
+
 # check out compiler-rt
 cd llvm/projects
 svn checkout http://llvm.org/svn/llvm-project/compiler-rt/trunk compiler-rt
@@ -42,4 +47,4 @@ svn checkout http://llvm.org/svn/llvm-project/libcxx/trunk libcxx
 cd ../..
 ```
 
-3. use the script `build_llvm_on_host.sh` or `build_llvm_for_arm.sh` to start build.
+3. use the script `build_llvm_on_host*.sh` or `build_llvm_for_arm.sh` to start build.

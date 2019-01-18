@@ -1,0 +1,3 @@
+flutter/packages/flutter_tools/lib/src/base/build.dart
+flutter/packages/flutter_tools/lib/src/commands/build_aot.dart
+flutter/packages/flutter_tools/lib/src/compile.dart

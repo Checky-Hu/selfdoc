@@ -20,9 +20,9 @@ elif [ "$1" == sita ]
 then
   if [ "$2" == cxx ]
   then
-    ./engine/src/flutter/tools/gn --unoptimized --runtime-mode=debug --sita --sita-cpu=arm --sita-prebuilt=/home/checky/Templates/prefix/bin --sita-use-vfp --arm-float-abi=hard --target-sysroot=${TMP_TARGET_TOOLCHAIN}/${TMP_TARGET_TRIPLE}/libc --target-toolchain=${TMP_TARGET_TOOLCHAIN} --target-triple=${TMP_TARGET_TRIPLE} --embedder-for-target
+    ./engine/src/flutter/tools/gn --unoptimized --runtime-mode=debug --sita --sita-cpu=arm --sita-prebuilt=/home/checky/Templates/prefix/bin --sita-use-vfp --arm-float-abi=hard --target-sysroot=${TMP_TARGET_TOOLCHAIN}/${TMP_TARGET_TRIPLE}/libc --target-toolchain=${TMP_TARGET_TOOLCHAIN} --target-triple=${TMP_TARGET_TRIPLE}
   else
-    ./engine/src/flutter/tools/gn --unoptimized --runtime-mode=debug --sita --sita-cpu=arm --sita-use-vfp --arm-float-abi=hard --target-sysroot=${TMP_TARGET_TOOLCHAIN}/${TMP_TARGET_TRIPLE}/libc --target-toolchain=${TMP_TARGET_TOOLCHAIN} --target-triple=${TMP_TARGET_TRIPLE} --embedder-for-target
+    ./engine/src/flutter/tools/gn --unoptimized --runtime-mode=debug --sita --sita-cpu=arm --sita-use-vfp --arm-float-abi=hard --target-sysroot=${TMP_TARGET_TOOLCHAIN}/${TMP_TARGET_TRIPLE}/libc --target-toolchain=${TMP_TARGET_TOOLCHAIN} --target-triple=${TMP_TARGET_TRIPLE}
   fi
 else
   echo "unknown platform"

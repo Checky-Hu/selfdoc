@@ -10,8 +10,8 @@ how to use qemu
 ```shell
 qemu-arm out/hello
 ```
-4. if there are errors, try to set the QEMU_LD_PATH:
+4. if there are errors, try to set the QEMU_LD_PREFIX and QEMU_SET_ENV:
 ```shell
 qemu-arm -help
-qemu-arm -L ../../../toolchains/gcc-linaro-arm-linux-gnueabihf-4.9-2014.08_linux/arm-linux-gnueabihf/libc/ out/hello
+qemu-arm -E LD_LIBRARY_PATH=${LD_LIBRARY_PATH} -L ../../../toolchains/gcc-linaro-arm-linux-gnueabihf-4.9-2014.08_linux/arm-linux-gnueabihf/libc/ out/hello
 ```

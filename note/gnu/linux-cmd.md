@@ -37,6 +37,7 @@ arm-linux-gnueabihf-readelf -d ${LIB_NAME}
 
 ### tar
 ```shell
+# 'z' means 'tar.gz', use 'tar --help' to see more about 'tar.xz' and 'tar.bz2'
 # 'c' means compress
 tar -zcvf ${TARGET_FILE} ${SOURCE_FILE}
 # 'x' means uncompress
@@ -63,3 +64,8 @@ patch -p1 < a.patch
 hexdump -C ${BIN_DATA}
 ```
 
+### gcc
+```shell
+# use 'pkg-config' to solve the include and link problems like autoconf & libtool
+gcc -o ${PROGRAM} ${SOURCE} ``pkg-config --cflags --libs libinput``
+```

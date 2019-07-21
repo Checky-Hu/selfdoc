@@ -31,7 +31,19 @@ xv6 note
 ## chapter1
 
 ### overview of process
+- xv6 uses page table that implemented by hardware to provide address space for each process. Page table translates virtual address that used by x86 instruction set to physical address that used by cpu and memory;
+- layout of process virtual address space: 0 -> user text -> user data -> user stack -> heap -> |0x80000000| BIOS |0x80100000| -> kernel text -> kernel data -> free memory -> 0xFFFFFFFF;
+- `proc.h` defines process struct;
+- when running user text, all kernel space is empty; when running kernel text, all user space keeps same but inactive;
+- process start system call -> cpu jump to kernel space -> hardware privilege level up -> finish system call -> hardware privilege level down -> cpu jump back to user space(process may block in kernel space and wait for I/O);
 
+### first address space
+
+### create first process
+
+### execute first process
+
+### first system call: `exec`
 
 ## appendix-a
 

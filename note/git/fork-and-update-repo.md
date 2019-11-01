@@ -4,12 +4,12 @@ fork and update repo by git
 1. fork repo;
 2. clone your own repo to local and show remote branch;
 ```shell
-git clone own-repo
+git clone ${own-repo-url}
 git remote -v
 ```
 3. add the source repo to remote branch as upstream;
 ```shell
-git remote add upstream src-repo
+git remote add upstream ${src-repo-url}
 git remote -v
 ```
 4. update local upstream branch;

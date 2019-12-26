@@ -1,2 +1,6 @@
+# Ignore output files of compile.
 out
 target
+
+# Ignore intermediate files of cargo build.
+Cargo.lock

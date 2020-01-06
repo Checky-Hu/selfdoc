@@ -20,7 +20,14 @@ apt-get autoremove --purge packagename
 - remove backup of uninstalled package: `apt-get autoclean`
 - remove backup of installed & uninstalled package: `apt-get clean`
 - upgrade all installed packages: `apt-get upgrade`
-- upgrade system version: `apt-get dist-upgrade`
+- upgrade system version:
+```shell
+# update all installed packages
+apt update && apt upgrade
+# edit /etc/apt/sources.list, change version name from old to new
+apt update && apt upgrade
+apt dist-upgrade
+```
 - search package in package list:
 ```shell
 apt-cache search string

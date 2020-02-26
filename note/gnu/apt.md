@@ -51,3 +51,12 @@ dpkg --get-selections | grep linux
 # uninstall old kernel
 dpkg --purge --force-remove-essential linux-image-XXX
 ```
+- add/remove key for packages:
+```shell
+# add key
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+# show keys
+apt-key list
+# remove key
+apt-key del ${keyid}
+```

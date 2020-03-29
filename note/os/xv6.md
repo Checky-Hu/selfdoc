@@ -77,3 +77,17 @@ xv6 note
 - x86 instruction set contains `in, out` for I/O devices' read and write;
 - modern x86 use `memory mapped I/O` for interacting with I/O devices just like memory.
 
+## appendix-b
+
+### boot loader
+- x86 PC starts with BIOS that prepares hardware and gives the right of control to boot sector(512B data area on the disk). Boot sector contains boot loader that load kernel to memory;
+- BIOS load boot sector to memory 0x7c00 and then set %ip to this address. When boot loader starts, cpu is under Intel 8088 cpu mode. Boot loader set cpu to modern operating mode and load kernel from disk to memory;
+- xv6 boot loader contains two source files: `bootasm.S` written by 16&32 bits asm, and `bootmain.c` written by c.
+
+### asm boot program
+
+### C boot program
+
+### in reality
+
+

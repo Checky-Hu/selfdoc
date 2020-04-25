@@ -9,6 +9,11 @@ uname -a
 cat /proc/version
 ```
 
+## show linux release version
+```
+lsb_release -a
+```
+
 ## search symbol in binary(executable file or library)
 ```shell
 # method 1

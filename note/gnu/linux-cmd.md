@@ -74,3 +74,10 @@ hexdump -C ${BIN_DATA}
 # use 'pkg-config' to solve the include and link problems like autoconf & libtool
 gcc -o ${PROGRAM} ${SOURCE} ``pkg-config --cflags --libs libinput``
 ```
+
+### ln
+```shell
+# create soft symbolic
+ln -s ${SOURCE} ${SOFT_LINK}
+```
+

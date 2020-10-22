@@ -40,6 +40,38 @@ arm-linux-gnueabihf-readelf -d ${LIB_NAME}
 
 ## other commands
 
+### gcc
+```shell
+# use 'pkg-config' to solve the include and link problems like autoconf & libtool
+gcc -o ${PROGRAM} ${SOURCE} ``pkg-config --cflags --libs libinput``
+```
+
+### hexdump
+```shell
+# show binary data
+hexdump -C ${BIN_DATA}
+```
+
+### ln
+```shell
+# create soft symbolic
+ln -s ${SOURCE} ${SOFT_LINK}
+```
+
+### patch
+```shell
+# create patch file
+diff -uparN a.c new_a.c > a.patch
+# generate target file
+patch -p1 < a.patch
+```
+
+### sudo
+```shell
+# use sudo to execute some commands that need root privilege.
+echo ${ROOT_PASSWORD} | sudo -S mkfs.vfat ...
+```
+
 ### tar
 ```shell
 # 'z' means 'tar.gz', use 'tar --help' to see more about 'tar.xz' and 'tar.bz2'
@@ -53,37 +85,5 @@ tar -zxvf ${PACK_FILE}
 ```shell
 # judge and return whether the expression is true or false
 test ${EXPRESSION}
-```
-
-### patch
-```shell
-# create patch file
-diff -uparN a.c new_a.c > a.patch
-# generate target file
-patch -p1 < a.patch
-```
-
-### hexdump
-```shell
-# show binary data
-hexdump -C ${BIN_DATA}
-```
-
-### gcc
-```shell
-# use 'pkg-config' to solve the include and link problems like autoconf & libtool
-gcc -o ${PROGRAM} ${SOURCE} ``pkg-config --cflags --libs libinput``
-```
-
-### ln
-```shell
-# create soft symbolic
-ln -s ${SOURCE} ${SOFT_LINK}
-```
-
-### sudo
-```shell
-# use sudo to execute some commands that need root privilege.
-echo ${ROOT_PASSWORD} | sudo -S mkfs.vfat ...
 ```
 

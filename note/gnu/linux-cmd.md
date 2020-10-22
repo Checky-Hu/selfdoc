@@ -81,3 +81,9 @@ gcc -o ${PROGRAM} ${SOURCE} ``pkg-config --cflags --libs libinput``
 ln -s ${SOURCE} ${SOFT_LINK}
 ```
 
+### sudo
+```shell
+# use sudo to execute some commands that need root privilege.
+echo ${ROOT_PASSWORD} | sudo -S mkfs.vfat ...
+```
+

@@ -1,6 +1,24 @@
 simple commands of linux
 ======
 
+## ssh
+```shell
+# generate ssh key
+ssh-keygen -t rsa -b 4096 -C ${EMAIL}
+# start ssh agent
+eval "$(ssh-agent -s)"
+# add rsa to ssh agent
+ssh-add ~/.ssh/id_rsa
+```
+
+## add user and set user account
+```shell
+# add user
+adduser ${USER_NAME}
+# add user to target group
+usermod -a -G ${GROUP_NAME} ${USER_NAME}
+```
+
 ## show linux kernel version
 ```shell
 # method 1
